@@ -1,0 +1,45 @@
+.modal {
+  width: 18rem;
+  height: 22rem;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: whitesmoke;
+  box-shadow: 24px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.btn-repeat {
+  margin-top: 15px;
+  color: white;
+  background-color: #ea7509;
+  border-radius: 20px;
+  font-weight: 300;
+  height: 3rem;
+  width: 90%;
+  border: none;
+}
+
+.btn-repeat:hover, .btn-redirect:hover {
+  opacity: 0.5;
+}
+
+.btn-redirect {
+  height: 3rem;
+  width: 90%;
+  margin-top: 15px;
+  color: rgb(111, 121, 130);
+  background-color: rgb(191, 200, 209);
+  border-radius: 20px;
+  border: none;
+}
+
+.modal-image {
+  margin-top: 1rem;
+}

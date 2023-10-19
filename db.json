@@ -1,0 +1,68 @@
+{
+  "financialHistory": [
+    {
+      "id": 1,
+      "userId": 1,
+      "type": "Ingreso",
+      "amount": 100,
+      "description": "Salario mensual"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "type": "Gasto",
+      "amount": 30,
+      "description": "Cena"
+    },
+    {
+      "userId": 1,
+      "type": "Ingreso",
+      "amount": 100,
+      "description": "Salario mensual",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "type": "Ingreso",
+      "amount": 100,
+      "description": "Salario mensual",
+      "id": 4
+    },
+    {
+      "userId": 100,
+      "expenseDate": "2023-10-19T18:35:48.943Z",
+      "type": "Ingreso",
+      "description": "Alquileres",
+      "expenseType": "Investments",
+      "amount": 20000,
+      "id": 5
+    },
+    {
+      "userId": 100,
+      "expenseDate": "2023-10-19T18:36:09.670Z",
+      "type": "Gasto",
+      "description": "Comida Michi",
+      "expenseType": "Food",
+      "amount": 500,
+      "id": 6
+    },
+    {
+      "userId": 100,
+      "expenseDate": "2023-10-19T19:28:37.715Z",
+      "type": "Ingreso",
+      "description": "Alquiler",
+      "expenseType": "Investments",
+      "amount": 12222,
+      "id": 7
+    },
+    {
+      "userId": 100,
+      "expenseDate": "2023-10-19T19:28:57.466Z",
+      "type": "Gasto",
+      "description": "Comida Michi",
+      "expenseType": "Food",
+      "amount": 233,
+      "id": 8
+    }
+  ]
+}
