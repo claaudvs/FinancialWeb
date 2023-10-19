@@ -1,10 +1,10 @@
 import React from 'react'
-import FormEgress from './FormEgress/FormEgress.component'
+import FornFinancial from '../components/FormFinancial/FornFinancial.component'
 
 export default function Egress (): React.JSX.Element {
   return (
     <div>
-      <FormEgress></FormEgress>
+      <FornFinancial TypeTransaction="Gasto"></FornFinancial>
     </div>
   )
 }

@@ -8,7 +8,6 @@ import React from 'react'
 import iconError from '../../../assets/icon/error.svg'
 import iconSuccess from '../../../assets/images/success.png'
 import './ModalSuccess.component.css'
-
 export default function ModalSuccess (
   {
     isOpen,

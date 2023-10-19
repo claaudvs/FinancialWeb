@@ -27,7 +27,7 @@ export default function History(): React.JSX.Element {
       renderCell: (params: GridRenderCellParams<any>) => (
         <span>
           {params.row.type.toUpperCase() + ' '}
-          {params.row.type == 'ingreso' ? (
+          {params.row.type == 'Ingreso' ? (
             <ArrowCircleUpIcon color="success" sx={{ fontSize: 18 }} />
           ) : (
             <ArrowCircleDownIcon color="warning" sx={{ fontSize: 18 }} />

@@ -1,10 +1,10 @@
 import React from 'react'
-import FormIncome from './FormIncome/FormIncome.component'
+import FornFinancial from '../components/FormFinancial/FornFinancial.component'
 
 export default function Income(): React.JSX.Element {
   return (
     <div>
-      <FormIncome></FormIncome>
+      <FornFinancial TypeTransaction="Ingreso"></FornFinancial>
     </div>
   )
 }

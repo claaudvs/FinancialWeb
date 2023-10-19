@@ -1,7 +1,7 @@
 'use client'
 import { MenuItem, TextField } from '@mui/material'
 import React from 'react'
-import './FormIncome.component.css'
+import './FormFinancial.component.css'
 
 import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
@@ -14,10 +14,16 @@ import TypeModal from '@/app/common/enum/typeModal'
 import SnackbarMessage from '@/app/components/Snackbar/SnackbarMessage.components'
 import dayjs from 'dayjs'
 import { useRouter } from 'next/navigation'
-import { usePostSaveFinancialMutation } from '@/app/redux/services/financialApi'
 import { Financial } from '@/app/models/financial.model'
+import { usePostSaveFinancialMutation } from '@/app/redux/services/financialApi'
+type TypeTransaction = 'Ingreso' | 'Gasto'
 
-export default function FormIncome(): React.JSX.Element {
+interface FormFinancialProps {
+  TypeTransaction: TypeTransaction
+}
+export default function FornFinancial({
+  TypeTransaction
+}:FormFinancialProps): React.JSX.Element {
   const router = useRouter()
   const [open, setOpen] = React.useState(false)
   const [loading, setLoading] = React.useState(false)
@@ -33,7 +39,7 @@ export default function FormIncome(): React.JSX.Element {
     defaultValues: {
       userId: 100,
       expenseDate: today,
-      type: 'ingreso'
+      type: TypeTransaction
     }
   })
   const [isOpen, setIsOpen] = React.useState(false)
@@ -47,6 +53,7 @@ export default function FormIncome(): React.JSX.Element {
     setOpen(state => !state)
     router.back()
   }
+
   const [saveFinancial] = usePostSaveFinancialMutation()
 
   const onSubmit: SubmitHandler<Financial> = data => {
@@ -65,13 +72,14 @@ export default function FormIncome(): React.JSX.Element {
         setIsOpen(true)
       })
   }
+
   const handleClose = (): void => {
     setIsOpen(false)
   }
 
   return (
     <div className="container">
-      <h1>Registro de ingreso</h1>
+      <h1>Registro de tus {TypeTransaction=="Gasto"?"Gastos":"Ingresos"}</h1>
       <h4>Ingresa la información que desea registrar</h4>
       <form
         // eslint-disable-next-line @typescript-eslint/no-misused-promises
@@ -79,7 +87,7 @@ export default function FormIncome(): React.JSX.Element {
         className="form-content"
       >
         <TextField
-          label="Descripcion del Ingreso"
+          label= {TypeTransaction=="Gasto"?"Descripcion del Gasto":"Descripcion del Ingreso"} 
           variant="standard"
           className="input"
           {...register('description', {
@@ -93,7 +101,7 @@ export default function FormIncome(): React.JSX.Element {
           select
           fullWidth
           variant="standard"
-          label="Tipo de ingreso"
+          label={TypeTransaction=="Gasto"?"Tipo de Gasto":"Tipo de Ingreso"}
           className="input"
           defaultValue=""
           inputProps={register('expenseType', {
@@ -157,7 +165,7 @@ export default function FormIncome(): React.JSX.Element {
           isOpen={open}
           onClose={toggleModal}
           onRedirect={handleRedirect}
-          typeTransaction="Ingreso"
+          typeTransaction={TypeTransaction}
           type={TypeModal.sucess}
           text="Registro Exitoso"
         />
