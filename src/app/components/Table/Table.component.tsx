@@ -1,6 +1,5 @@
 'use client'
 
-import './Table.component.css'
 import { DataGrid, GridColDef } from '@mui/x-data-grid'
 interface TableProps {
   title: string
