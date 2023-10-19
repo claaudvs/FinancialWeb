@@ -10,8 +10,8 @@ export default function Home(): React.JSX.Element {
   return (
     <div className="content-page">
       <div className="title-description">
-        <h1 className="title-welcome">Bienvenido, Pepito !</h1>
-        <p>Registrar tus ingresos nunca fue tan fácil </p>
+        <h1 className="title-welcome">Bienvenido, Pepito!</h1>
+        <p>Registrar tus ingresos nunca fue tan fácil</p>
         <p>
           Ahora podrás tener el control de tus finanzas en línea desde la
           comodidad de tu celular 
