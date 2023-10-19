@@ -1,0 +1,43 @@
+.container {
+  margin: 2rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  align-items: center;
+}
+
+.input,.btn-secondary{
+  width: 100%;
+  margin: 1.5rem 1.5rem 0.5rem 1.5rem;
+}
+
+.btn-secondary {
+  margin-top: 3rem;
+  height: 3rem;
+  color: white;
+  background-color: #ea7509;
+  border-radius: 1.8rem;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #ea7509;
+  opacity: 0.5;
+}
+
+.error-msg {
+  margin: 0rem 1.5rem 0rem 1.5rem;
+  color: red;
+  font-size: 0.75rem;
+}
+
+.MuiFormHelperText-root{
+  color: red !important;
+}
