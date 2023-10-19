@@ -37,7 +37,7 @@ export default function FormEgress(): React.JSX.Element {
     }
   })
   const [isOpen, setIsOpen] = React.useState(false)
-  const [eventType, setTypeEvent] = React.useState('')
+  const [eventType, setEventType] = React.useState('')
 
   const toggleModal = (): void => {
     setOpen(state => !state)
@@ -61,7 +61,7 @@ export default function FormEgress(): React.JSX.Element {
       })
       .catch(error => {
         setLoading(false)
-        setTypeEvent('error')
+        setEventType('error')
         console.log('Error=>', error)
         setIsOpen(true)
       })
@@ -101,7 +101,7 @@ export default function FormEgress(): React.JSX.Element {
           inputProps={register('expenseType', {
             required: { value: true, message: 'Selecione una opcion' }
           })}
-          error={!(errors.expenseType == null)}
+          error={(errors.expenseType != null)}
           helperText={errors.expenseType?.message}
         >
           <MenuItem value="">--Seleccione--</MenuItem>
@@ -144,7 +144,7 @@ export default function FormEgress(): React.JSX.Element {
               />
             )}
           />
-          {!(errors?.expenseDate == null) &&
+          {(errors?.expenseDate != null) &&
             errors.expenseDate.type === 'required' && (
               <span className="error-msg">La fecha es requerida</span>
             )}

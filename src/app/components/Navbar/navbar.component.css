@@ -21,7 +21,7 @@ header {
   padding: 3px 8px 3px 8px;
   font-weight: 600;
   text-decoration-line: none;
-  font-family: arial;
+  font-family: Arial, sans-serif;
 }
 
 .header-items a:hover {

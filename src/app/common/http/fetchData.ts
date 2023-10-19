@@ -1,6 +1,6 @@
 type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE'
 
-async function fetchData<T, R> (
+async function fetchData<T, R>(
   url: string,
   method: HttpMethod,
   body?: R,
@@ -25,6 +25,7 @@ async function fetchData<T, R> (
     const data: T = await response.json()
     return data
   } catch (error) {
+    console.error(error)
     throw error
   }
 }

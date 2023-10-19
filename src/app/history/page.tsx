@@ -15,7 +15,7 @@ import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown'
 export default function History(): React.JSX.Element {
   const { data, error, isLoading, isFetching } = useGetHistoryQuery(null)
   if (isLoading || isFetching) console.log('cargando')
-  if (error) console.log('error')
+  if (error) console.log('some error')
 
   const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 70 },
